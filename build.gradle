@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply from: 'https://github.com/breskeby/gradleplugins/raw/0.9-upgrade/aspectjPlugin/aspectJ.gradle'
+
+repositories {
+  mavenCentral()
+  mavenRepo urls: 'http://maven.springframework.org/milestone'
+  mavenRepo urls: 'http://maven.springframework.org/release'
+  mavenRepo urls: 'http://maven.springframework.org/snapshot'
+  mavenRepo urls: 'http://m2.neo4j.org'
+  mavenRepo urls: 'http://repository.jboss.com/maven2/'
+}
+
+dependencies {
+  aspects 'org.springframework.data:spring-data-neo4j:1.0.0.RELEASE'
+  ajc 'org.aspectj:aspectjtools:1.6.11.RELEASE'
+  compile 'org.springframework.data:spring-data-neo4j:1.0.0.RELEASE',
+          'org.aspectj:aspectjrt:1.6.11.RELEASE'
+  testCompile 'junit:junit:4.8.2'   
+}
+
+ideaProject {
+  javaVersion = '1.6'
+}
+
