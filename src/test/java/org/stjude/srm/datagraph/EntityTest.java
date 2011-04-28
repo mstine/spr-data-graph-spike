@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration
 public class EntityTest {
 	
-	/*@Test
+	@Test
 	public void explore() {
 		
 		Entity entity = new Entity();
@@ -21,7 +21,7 @@ public class EntityTest {
 		String typeProperty = (String) entity.getEntityState().getPersistentState().getProperty("type");
 		Assert.assertEquals(Entity.Type.ORDER.toString(), typeProperty);
 		
-	}*/
+	}
 	
 	
 	@Test
@@ -31,12 +31,12 @@ public class EntityTest {
 		entity.setType(Entity.Type.SUBJECT);
 		entity.persist();
 		
-//		Attribute<String> sampleType = new Attribute<String>();
-//		sampleType.setValue("DNA");
-//		sampleType.persist();
-//		entity.addAttribute(sampleType);
+		Attribute<String> sampleType = new Attribute<String>();
+		sampleType.setValue("DNA");
+		sampleType.persist();
+		entity.addAttribute(sampleType);
 		
-//		Assert.assertEquals(1, entity.getAttributes().size());
+		Assert.assertEquals(1, entity.getAttributes().size());
 	}
 
 }

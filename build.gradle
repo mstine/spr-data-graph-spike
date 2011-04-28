@@ -13,9 +13,9 @@ repositories {
 
 dependencies {
   aspects 'org.springframework.data:spring-data-neo4j:1.0.0.RELEASE'
-  ajc 'org.aspectj:aspectjtools:1.6.11.RELEASE'
+  ajc 'org.aspectj:aspectjtools:1.6.12.BUILD-SNAPSHOT'
   compile 'org.springframework.data:spring-data-neo4j:1.0.0.RELEASE',
-          'org.aspectj:aspectjrt:1.6.11.RELEASE'
+          'org.aspectj:aspectjrt:1.6.12.BUILD-SNAPSHOT'
   testCompile 'junit:junit:4.8.2'   
 }
 
